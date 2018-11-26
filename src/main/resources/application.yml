@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  profiles: default
+  application:
+    name: demo1
+  datasource: 
+    name: bitcash_v3
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo1
+    username: root
+    password: password 
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+       
+  jpa:
+    hibernate:
+      ddl-auto: none 
+      show-sql: true
+    
+logging:
+  level:
+    root: INFO
